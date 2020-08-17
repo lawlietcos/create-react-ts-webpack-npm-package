@@ -1,6 +1,6 @@
 {
   "name": "@tms/crf-design",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "./lib/index.js",
   "files": [
     "/lib"
@@ -139,7 +139,7 @@
     "yarg": "^1.0.8",
     "yargs": "^15.4.1"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@csstools/normalize.css": "^10.1.0",
     "@hot-loader/react-dom": "^16.13.0",
     "react": "^16.13.1",
