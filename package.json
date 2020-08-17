@@ -1,6 +1,6 @@
 {
   "name": "@tms/crf-design",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "./lib/index.js",
   "files": [
     "/lib"
@@ -146,5 +146,9 @@
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",
     "react-router-dom": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }
