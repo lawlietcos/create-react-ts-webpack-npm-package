@@ -33,7 +33,10 @@ function getCssLoaders(importLoaders: number) {
 const commonConfig: Configuration = {
   cache: true,
   context: PROJECT_ROOT,
-  entry: ['react-hot-loader/patch', resolve(PROJECT_ROOT, './src/index.tsx')],
+  entry: [
+    'react-hot-loader/patch',
+    resolve(PROJECT_ROOT, __DEV__ ? './src/index.tsx' : './src/index.ts'),
+  ],
   resolve: {
     // 我们导入ts 等模块一般不写后缀名，webpack 会尝试使用这个数组提供的后缀名去导入
     extensions: ['.js', '.tsx', '.ts', '.json'],
@@ -73,6 +76,9 @@ const commonConfig: Configuration = {
             loader: 'less-loader',
             options: {
               sourceMap: true,
+              lessOptions: {
+                javascriptEnabled: true,
+              },
             },
           },
         ],

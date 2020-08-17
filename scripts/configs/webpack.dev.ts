@@ -50,7 +50,7 @@ const devConfig = merge(commonConfig, {
       template: resolve(PROJECT_ROOT, './public/index.html'),
       templateParameters: (...args: any[]) => {
         const [compilation, assets, assetTags, options] = args
-        const rawPublicPath = commonConfig.output!.publicPath!
+        const rawPublicPath = '/'
         return {
           compilation,
           webpackConfig: compilation.options,
